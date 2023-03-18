@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
+  
+  .App {
+    text-align: center;
+    font-family: "Space Mono", monospace;
+  }
+  
+  .display {
+    font-size: 42px;
+  }
+  
+  #log {
+    margin: 30px;
+  }
+  
+  button {
+    font-family: "Noto Sans", sans-serif;
+    z-index: 19;
+    position: relative;
+    font-size: 20px;
+    margin: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #3498db;
+    border: none;
+    transition: transform 0.15s linear, background-color 0.15s ease;
+  }
+  
+  button::after {
+    content: "";
+    position: absolute;
+    background-color: #2980b9;
+    transform: translate3d(0px, 4px, 0px);
+    top: calc(100% - 4px);
+    left: 0;
+    width: 100%;
+    height: 8px;
+    transition: height 0.15s linear;
+  }
+  
+  button:hover {
+    background-color: #439edb;
+  }
+  
+  button:active {
+    transform: translate3d(0px, 4px, 0px);
+  }
+  
+  button:active:after {
+    height: 4px;
+  }
+  
