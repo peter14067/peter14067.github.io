@@ -280,6 +280,8 @@ function App(key, initialValue = "") {
     if (start == true) {
       alert("有程序正在執行中");
     } else {
+     
+      localStorage.setItem("userInfo8", JSON.stringify(index));
       setNum(index);
       // console.log(numm)
     }
@@ -315,11 +317,22 @@ function App(key, initialValue = "") {
   };
 
   const timerStop = (index) => {
+
+
+    
+
+
+
     setStart(false);
 
     const newTodos3 = { ...final };
 
     console.log(newTodos3[nowWorkspace]["doing"][index]);
+
+
+    if(showingtime==0){
+      // alert('123')
+    }else{
     //  setFinal(newTodos2)
 
     // setFinal(newTodos1)
@@ -339,7 +352,7 @@ function App(key, initialValue = "") {
     // const a = Math.floor((count+newTodos3[nowWorkspace]['doing'][index].costtime) / 60)
     //   const b =  Math.floor((count+newTodos3[nowWorkspace]['doing'][index].costtime) % 60)
 
-    setNum(index);
+    // setNum(index);
     newTodos3[nowWorkspace]["doing"][index].spenttime = 0;
     newTodos3[nowWorkspace]["doing"][index].costtime =
       count + newTodos3[nowWorkspace]["doing"][index].costtime;
@@ -380,7 +393,42 @@ function App(key, initialValue = "") {
     setCount(0);
 
     setFinal(newTodos3);
-    alert("總花費" + count + "秒");
+    // alert("總花費" + count + "秒");
+
+
+
+
+    let timerInterval
+    Swal.fire({
+      title: '計時完成!',
+      html: '',
+      timer: 500,
+      timerProgressBar: true,
+      didOpen: () => {
+        Swal.showLoading()
+        const b = Swal.getHtmlContainer().querySelector('b')
+        timerInterval = setInterval(() => {
+          b.textContent = Swal.getTimerLeft()
+        }, 100)
+      },
+      willClose: () => {
+        clearInterval(timerInterval)
+      }
+    }).then((result) => {
+      /* Read more about handling dismissals below */
+      if (result.dismiss === Swal.DismissReason.timer) {
+        console.log('I was closed by the timer')
+      }
+    })
+    
+
+
+  }
+  
+
+
+
+
   };
 
   const timerStop1 = (index) => {
@@ -445,6 +493,12 @@ function App(key, initialValue = "") {
         setShowingtime(JSON.parse(localStorage.getItem("userInfo7")));
       } else {
         setShowingtime(showingtime);
+      }
+
+      if (JSON.parse(localStorage.getItem("userInfo8")) != "null") {
+        setNum(JSON.parse(localStorage.getItem("userInfo8")));
+      } else {
+        setNum(numm);
       }
 
       setChange(true);
@@ -534,6 +588,7 @@ function App(key, initialValue = "") {
     clock1,
     nowWorkmission,
     showingtime,
+    numm
   ]);
   // useEffect(
   //   () => {
@@ -558,14 +613,17 @@ function App(key, initialValue = "") {
   const addlist1 = () => {
     Setshowdis("inline-block");
     Setshowdis("none");
+    console.log(idList) 
 
+   console.log(idList.indexOf(input1))
     if (input1 != "") {
       const newTodos1 = { ...final };
       const newTodos2 = { ...final[nowWorkspace]["notfinish"][index] };
       const i = 0;
-
+   
       // console.log(idList.indexOf(input1));
-      if (idList.indexOf(input1) == 0) {
+      if (idList.indexOf(input1) != -1) {
+        
         // alert("檔案已存在，請換一個檔名");
         Swal.fire("檔案已存在，請換一個檔名");
       } else {
