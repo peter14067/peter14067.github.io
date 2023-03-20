@@ -278,7 +278,8 @@ function App(key, initialValue = "") {
   // const timerStart = (index) => setStart(true);
   const timerStart = (index) => {
     if (start == true) {
-      alert("有程序正在執行中");
+      // alert("有程序正在執行中");
+      Swal.fire("任務已經在執行中");
     } else {
      
       localStorage.setItem("userInfo8", JSON.stringify(index));
@@ -711,7 +712,7 @@ function App(key, initialValue = "") {
       Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: "請先結束執行中專案!",
+        text: "請先結束執行中任務!",
         // footer: '<a href="">Why do I have this issue?</a>',
       });
     }
@@ -867,14 +868,27 @@ function App(key, initialValue = "") {
         console.log(clock1);
         setClock1("");
       } else {
-        alert("專案還在執行，請先結束專案");
+
+        Swal.fire({
+          icon: "任務還在執行，請先結束任務",
+          title: "Oops...",
+          text: "請先結束執行中任務!",
+          // footer: '<a href="">Why do I have this issue?</a>',
+        });
+        // alert("任務還在執行，請先結束任務");
       }
 
       // alert("嗨你好")
     } else {
       console.log(clock1);
       console.log(newTodos1[nowWorkspace]["doing"][index]);
-      alert("請先結束執行中的專案");
+      // alert("請先結束執行中的任務");
+      Swal.fire({
+        icon: "請先結束執行中的任務",
+        title: "還有任務在執行...",
+        text: "請先結束執行中任務!",
+        // footer: '<a href="">Why do I have this issue?</a>',
+      });
     }
 
     // console.log(index)
@@ -938,7 +952,13 @@ function App(key, initialValue = "") {
 
       setClock1("");
     } else {
-      alert("還有專案案正在執行");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "請先完成任務",
+        // footer: '<a href="">Why do I have this issue?</a>',
+      });
+      // alert("還有專案案正在執行");
     }
   };
 
@@ -986,7 +1006,13 @@ function App(key, initialValue = "") {
       // console.log(final)
       // localStorage.setItem("userInfo3", JSON.stringify(""));
     } else {
-      alert("還有專案在執行");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "請先完成任務",
+        // footer: '<a href="">Why do I have this issue?</a>',
+      });
+      // alert("還有專案在執行");
     }
 
     // setClock1("");
@@ -1016,7 +1042,14 @@ function App(key, initialValue = "") {
 
       // setClock1("");
     } else {
-      alert("請先結束專案");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "請先完成任務",
+        // footer: '<a href="">Why do I have this issue?</a>',
+      });
+      
+      // alert("請先結束專案");
     }
   };
 
@@ -1309,7 +1342,7 @@ function App(key, initialValue = "") {
                 // backgroundColor: "rgb(0,24,24)",
               }}
             >
-              執行中專案：{nowWorkmission}
+              執行中任務：{nowWorkmission}
             </p>
             </div>
             <p
@@ -1440,7 +1473,7 @@ function App(key, initialValue = "") {
                   }}
                   value={input}
                   onChange={todoNewInput}
-                  placeholder="為這張卡片輸入標題..."
+                  placeholder="為這個任務輸入標題..."
                 />
               </div>
             </div>
@@ -1457,7 +1490,7 @@ function App(key, initialValue = "") {
                 display: show,
               }}
             >
-              新增卡片
+              新增任務
             </button>
             {/* <button onClick={add} style={{border:"none",verticalAlign:"middle"}}><img src={Add} style={{width:"40%",border:"none",verticalAlign:"middle",border:"none",display:show}} /></button> */}
 
@@ -1481,7 +1514,7 @@ function App(key, initialValue = "") {
                 <div style={{ display: "flex", color: "rgb(122,134,146)" }}>
                   {/*         
                   <BiPlus /> */}
-                  新增卡片
+                  新增任務
                 </div>
               </button>
             </div>
