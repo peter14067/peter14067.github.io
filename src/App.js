@@ -127,19 +127,12 @@ function App(key, initialValue = "") {
       notfinish: [
         { name: "完成第二個作品集", done: false },
         { name: "寫一個系統", done: false },
-        { name: "面試", done: false },
+      
       ],
       doing: [
+        
         {
-          name: "寫程式",
-          done: false,
-          spenttime: 0,
-          costtime: 0,
-          costtime1: 0,
-          sho: "none",
-        },
-        {
-          name: "跑lalamove",
+          name: "練習css",
           done: false,
           spenttime: 0,
           costtime: 0,
@@ -153,7 +146,16 @@ function App(key, initialValue = "") {
           costtime: 0,
           costtime1: 0,
           sho: "none",
-        },
+        }
+        ,
+        {
+          name: "面試",
+          done: false,
+          spenttime: 0,
+          costtime: 0,
+          costtime1: 0,
+          sho: "none",
+        }
       ],
       finish: [
         {
@@ -184,19 +186,19 @@ function App(key, initialValue = "") {
     },
     trello作品集: {
       notfinish: [
-        { name: "時鐘計時器", done: false },
-        { name: "css刻板", done: false },
+        { name: "排程選擇", done: false },
+        // { name: "css刻板", done: false },
       ],
       doing: [
         {
-          name: "css畫精緻",
+          name: "css畫風更精緻",
           done: false,
           spenttime: 0,
           costtime: 0,
           sho: "none",
         },
         {
-          name: "trello進階功能",
+          name: "trello測試",
           done: false,
           spenttime: 0,
           costtime: 0,
@@ -205,7 +207,8 @@ function App(key, initialValue = "") {
       ],
       finish: [
         { name: "trello基本功能", done: false },
-        { name: "trello第一版css", done: false },
+        { name: "trellocss", done: false },
+        { name: "trello計時功能", done: false },
       ],
     },
   });
