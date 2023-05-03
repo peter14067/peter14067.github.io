@@ -118,16 +118,16 @@ function App(key, initialValue = "") {
         },
       ],
       finish: [
-        { name: "task7", done: false, spenttime: 0, costtime: 0 },
-        { name: "task8", done: false, spenttime: 0, costtime: 0 },
-        { name: "task9", done: false, spenttime: 0, costtime: 0 },
+        // { name: "task7", done: false, spenttime: 0, costtime: 0 },
+        // { name: "task8", done: false, spenttime: 0, costtime: 0 },
+        // { name: "task9", done: false, spenttime: 0, costtime: 0 },
       ],
     },
     台北行程: {
       notfinish: [
-        { name: "完成第二個作品集", done: false },
-        { name: "寫一個系統", done: false },
-        { name: "面試", done: false },
+        { name: "整理房間", done: false },
+        { name: "吃晚餐", done: false },
+        { name: "收衣服", done: false },
       ],
       doing: [
         {
@@ -139,7 +139,7 @@ function App(key, initialValue = "") {
           sho: "none",
         },
         {
-          name: "跑lalamove",
+          name: "曬衣服",
           done: false,
           spenttime: 0,
           costtime: 0,
@@ -147,7 +147,7 @@ function App(key, initialValue = "") {
           sho: "none",
         },
         {
-          name: "第一個作品",
+          name: "面試",
           done: false,
           spenttime: 0,
           costtime: 0,
@@ -157,7 +157,7 @@ function App(key, initialValue = "") {
       ],
       finish: [
         {
-          name: "找一年房子",
+          name: "洗衣服",
           done: false,
           spenttime: 0,
           costtime: 0,
@@ -165,7 +165,7 @@ function App(key, initialValue = "") {
           sho: "none",
         },
         {
-          name: "咖啡廳待滿",
+          name: "規劃行程",
           done: false,
           spenttime: 0,
           costtime: 0,
@@ -182,32 +182,32 @@ function App(key, initialValue = "") {
         },
       ],
     },
-    trello作品集: {
-      notfinish: [
-        { name: "時鐘計時器", done: false },
-        { name: "css刻板", done: false },
-      ],
-      doing: [
-        {
-          name: "css畫精緻",
-          done: false,
-          spenttime: 0,
-          costtime: 0,
-          sho: "none",
-        },
-        {
-          name: "trello進階功能",
-          done: false,
-          spenttime: 0,
-          costtime: 0,
-          sho: "none",
-        },
-      ],
-      finish: [
-        { name: "trello基本功能", done: false },
-        { name: "trello第一版css", done: false },
-      ],
-    },
+    // 作品集: {
+    //   notfinish: [
+    //     { name: "時鐘計時器", done: false },
+    //     { name: "css刻板", done: false },
+    //   ],
+    //   doing: [
+    //     {
+    //       name: "css畫精緻",
+    //       done: false,
+    //       spenttime: 0,
+    //       costtime: 0,
+    //       sho: "none",
+    //     },
+    //     {
+    //       name: "trello進階功能",
+    //       done: false,
+    //       spenttime: 0,
+    //       costtime: 0,
+    //       sho: "none",
+    //     },
+    //   ],
+    //   finish: [
+    //     { name: "trello基本功能", done: false },
+    //     { name: "trello第一版css", done: false },
+    //   ],
+    // },
   });
 
   const [comedown, setComedown] = useState(10);
@@ -1272,7 +1272,7 @@ function App(key, initialValue = "") {
                 style={{
                   border: "none",
                   // backgroundColor: "white",
-
+                  backgroundColor: " rgb(251,251,255)",
                   color: "black",
                   marginLeft: "10px",
                   marginRight: "auto",
