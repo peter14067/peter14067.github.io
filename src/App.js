@@ -125,20 +125,12 @@ function App(key, initialValue = "") {
     },
     台北行程: {
       notfinish: [
-<<<<<<< HEAD
         { name: "整理房間", done: false },
         { name: "吃晚餐", done: false },
         { name: "收衣服", done: false },
-=======
-        { name: "完成第二個作品集", done: false },
-        { name: "寫一個系統", done: false },
-      
->>>>>>> 490a3465fc757fd417533460f732e69621e5030c
       ],
       doing: [
-        
         {
-<<<<<<< HEAD
           name: "寫程式",
           done: false,
           spenttime: 0,
@@ -148,9 +140,6 @@ function App(key, initialValue = "") {
         },
         {
           name: "曬衣服",
-=======
-          name: "練習css",
->>>>>>> 490a3465fc757fd417533460f732e69621e5030c
           done: false,
           spenttime: 0,
           costtime: 0,
@@ -164,16 +153,7 @@ function App(key, initialValue = "") {
           costtime: 0,
           costtime1: 0,
           sho: "none",
-        }
-        ,
-        {
-          name: "面試",
-          done: false,
-          spenttime: 0,
-          costtime: 0,
-          costtime1: 0,
-          sho: "none",
-        }
+        },
       ],
       finish: [
         {
@@ -202,7 +182,6 @@ function App(key, initialValue = "") {
         },
       ],
     },
-<<<<<<< HEAD
     // 作品集: {
     //   notfinish: [
     //     { name: "時鐘計時器", done: false },
@@ -229,35 +208,6 @@ function App(key, initialValue = "") {
     //     { name: "trello第一版css", done: false },
     //   ],
     // },
-=======
-    trello作品集: {
-      notfinish: [
-        { name: "排程選擇", done: false },
-        // { name: "css刻板", done: false },
-      ],
-      doing: [
-        {
-          name: "css畫風更精緻",
-          done: false,
-          spenttime: 0,
-          costtime: 0,
-          sho: "none",
-        },
-        {
-          name: "trello測試",
-          done: false,
-          spenttime: 0,
-          costtime: 0,
-          sho: "none",
-        },
-      ],
-      finish: [
-        { name: "trello基本功能", done: false },
-        { name: "trellocss", done: false },
-        { name: "trello計時功能", done: false },
-      ],
-    },
->>>>>>> 490a3465fc757fd417533460f732e69621e5030c
   });
 
   const [comedown, setComedown] = useState(10);
